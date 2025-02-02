@@ -44,14 +44,14 @@ class ProductController extends Controller
             'sku'=> $request->input('sku'),
             'category_id'=> $request->input('category_id'),
         ]);
-        return redirect('/');
+        return redirect('/products');
     }
 
     public function delete($id) {
             $product = Product::where('id',$id);
             $product->delete();
 
-        return redirect('/');
+        return redirect('/products');
     }
 
     public function edit($id) {
@@ -83,6 +83,6 @@ class ProductController extends Controller
             'sku'=> $request->input('sku'),
             'category_id'=> $request->input('category_id'),
         ]);
-        return redirect('/');
+        return redirect('/products');
     }
 }
